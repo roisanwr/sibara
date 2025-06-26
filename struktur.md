@@ -1,0 +1,136 @@
+# Struktur Proyek
+
+```
+dbpenjualan.sql
+home.php
+index.php
+koneksi.php
+register.php
+barang/
+    barang-hapus.php
+    barang-lihat.php
+    barang-tambah.php
+    barang-ubah.php
+css/
+    bootstrap.min.css
+    style.css
+    styles.css
+    bootstrap/
+        _media.css
+        mixins/
+            _border-radius.css
+            _screen-reader.css
+            _visibility.css
+        utilities/
+            _stretched-link.css
+fonts/
+images/
+    anantaa.png
+    bengkel.png
+    bg.jpg
+    kop.png
+    stempel.png
+    ttds.png
+img/
+    eye.png
+    ganti.png
+    Google.png
+    keluar.png
+    logo-bengkel.png
+    logo-bengkell.png
+    profil.png
+js/
+    bootstrap.min.js
+    jquery.min.js
+    main.js
+    popper.js
+js2/
+    bootstrap.min.js
+    jquery.min.js
+    main.js
+    popper.js
+nota/
+    nota-hapus.php
+    nota-lihat.php
+    nota-tambah.php
+    nota-ubah.php
+    notacetak.php
+    notadetail-hapus.php
+    notadetail-lihat.php
+    notadetail-tambah.php
+    notadetail-ubah.php
+pelanggan/
+    pelanggan-hapus.php
+    pelanggan-lihat.php
+    pelanggan-tambah.php
+    pelanggan-ubah.php
+scss/
+    style.scss
+    bootstrap/
+        _alert.scss
+        _badge.scss
+        _breadcrumb.scss
+        _button-group.scss
+        _buttons.scss
+        _card.scss
+        _carousel.scss
+        _close.scss
+        _code.scss
+        _custom-forms.scss
+        _dropdown.scss
+        _forms.scss
+        _functions.scss
+        _grid.scss
+        _images.scss
+        _input-group.scss
+        _jumbotron.scss
+        _list-group.scss
+        _media.scss
+        _mixins.scss
+        _modal.scss
+        _nav.scss
+        _navbar.scss
+        _pagination.scss
+        _popover.scss
+        _print.scss
+        _progress.scss
+        _reboot.scss
+        _root.scss
+        _spinners.scss
+        _tables.scss
+        _toasts.scss
+        _tooltip.scss
+        _transitions.scss
+        _type.scss
+        _utilities.scss
+        _variables.scss
+        bootstrap-grid.scss
+        bootstrap-reboot.scss
+        bootstrap.scss
+        mixins/
+            _alert.scss
+            _background-variant.scss
+            _badge.scss
+            _border-radius.scss
+            _box-shadow.scss
+            _breakpoints.scss
+            _buttons.scss
+            _caret.scss
+            _clearfix.scss
+            _deprecate.scss
+            _float.scss
+            _forms.scss
+            _gradients.scss
+            _grid-framework.scss
+            _grid.scss
+            _hover.scss
+            _image.scss
+            _list-group.scss
+            _lists.scss
+            _nav-divider.scss
+            _pagination.scss
+            ...
+        utilities/
+            ...
+        vendor/
+```
