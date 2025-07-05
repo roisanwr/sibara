@@ -39,7 +39,7 @@ require_once '../templates/header.php';
         <div class="flex justify-end mb-6">
             <a href="permintaan-tambah.php" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition-colors duration-200">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                <span>Buat Permintaan</span>
+                <span>Tambah Permintaan</span>
             </a>
         </div>
         <?php endif; ?>

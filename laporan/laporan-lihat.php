@@ -20,8 +20,8 @@ $hasil = mysqli_query($koneksi, $query);
 
 
 // Pengaturan Header
-$page_title = "Laporan Permintaan Barang";
-$breadcrumbs = "Laporan / Permintaan Barang";
+$page_title = "Transaksi Barang";
+$breadcrumbs = "Transaksi / Permintaan Barang";
 $action_button = '';
 
 require_once '../templates/header.php';

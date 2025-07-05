@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 // Pengaturan Header Dinamis
-$page_title = "Buat Permintaan Barang Baru";
+$page_title = "Form Permintaan Barang Baru";
 $breadcrumbs = "Permintaan Barang / Buat Baru";
 $action_button = '';
 
