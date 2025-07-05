@@ -1,0 +1,200 @@
+/*
+============================================
+Custom CSS for Soft UI Theme & Functionality
+============================================
+*/
+:root {
+    --bg-main: #f0f2f5;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-hover: #f0f2f5;
+    --text-primary: #344767;
+    --text-secondary: #67748e;
+    --text-muted: #a0aec0;
+    --border-color: #e9ecef;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --shadow-lg-color: rgba(0, 0, 0, 0.1);
+    --accent-orange: #fd9a3f;
+    --accent-orange-light: #fed2a9;
+    --success-color: #82d616;
+    --sidebar-width-expanded: 250px;
+    --sidebar-width-collapsed: 80px; /* Sedikit lebih lebar untuk ikon di tengah */
+}
+
+[data-theme="dark"] {
+    --bg-main: #1a202c;
+    --bg-sidebar: #2d3748;
+    --bg-card: #2d3748;
+    --bg-hover: #4a5568;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --text-muted: #718096;
+    --border-color: #4a5568;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --shadow-lg-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.soft-shadow {
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color);
+}
+.soft-shadow-lg {
+     box-shadow: 0 10px 15px -3px var(--shadow-lg-color), 0 4px 6px -2px var(--shadow-lg-color);
+}
+
+/* ======================================================= */
+/* ====== PERBAIKAN PADA STYLING SIDEBAR (DIMULAI) ======= */
+/* ======================================================= */
+
+/* --- Sidebar Styling (Kondisi Normal / Terbuka) --- */
+.sidebar {
+    background-color: var(--bg-sidebar);
+    width: var(--sidebar-width-expanded);
+    transition: width 0.3s ease, transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.sidebar-menu-item {
+    color: var(--text-secondary);
+}
+
+.sidebar-menu-item.active, .sidebar-menu-item:hover {
+    background-color: var(--accent-orange-light);
+    color: var(--accent-orange);
+}
+
+.sidebar-menu-item.active .menu-icon-path, .sidebar-menu-item:hover .menu-icon-path {
+     stroke: var(--accent-orange);
+}
+
+.sidebar-menu-item.active .menu-icon-fill, .sidebar-menu-item:hover .menu-icon-fill {
+     fill: var(--accent-orange);
+}
+
+
+/* --- Styling KHUSUS untuk Sidebar TERTUTUP --- */
+
+/* Atur lebar sidebar saat tertutup */
+body.sidebar-collapsed .sidebar {
+    width: var(--sidebar-width-collapsed);
+    overflow-x: hidden; /* Sembunyikan konten yang meluber saat transisi */
+}
+
+/* PERBAIKAN FINAL: Sembunyikan teks dengan 'display: none' agar tidak mengganggu layout */
+body.sidebar-collapsed .sidebar .sidebar-menu-text,
+body.sidebar-collapsed .sidebar .px-3.py-2.text-xs {
+    display: none;
+}
+
+/* Posisikan ikon di tengah saat sidebar tertutup (sekarang akan bekerja) */
+body.sidebar-collapsed .sidebar .sidebar-menu-item {
+    justify-content: center;
+}
+
+/* FITUR DIKEMBALIKAN: Saat sidebar tertutup di-hover, lebarkan kembali */
+body.sidebar-collapsed .sidebar:hover {
+    width: var(--sidebar-width-expanded);
+    box-shadow: 0 10px 15px -3px var(--shadow-lg-color), 0 4px 6px -2px var(--shadow-lg-color);
+}
+
+/* PERBAIKAN FINAL: Saat sidebar melebar karena hover, kembalikan posisi menu jadi rata kiri */
+body.sidebar-collapsed .sidebar:hover .sidebar-menu-item {
+    justify-content: flex-start;
+}
+
+/* FITUR DIKEMBALIKAN: Tampilkan kembali teks saat sidebar di-hover */
+body.sidebar-collapsed .sidebar:hover .sidebar-menu-text {
+    display: inline; /* Span adalah inline element */
+}
+body.sidebar-collapsed .sidebar:hover .px-3.py-2.text-xs {
+    display: block; /* Paragraf adalah block element */
+}
+
+/* ======================================================= */
+/* ====== PERBAIKAN PADA STYLING SIDEBAR (SELESAI) ======= */
+/* ======================================================= */
+
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.submenu.open {
+    max-height: 500px; /* Nilai besar agar cukup untuk semua submenu */
+}
+
+/* Header */
+.header {
+    background-color: var(--bg-card);
+}
+
+/* Main Content */
+.main-content {
+    width: calc(100% - var(--sidebar-width-expanded));
+    transition: width 0.3s ease;
+}
+body.sidebar-collapsed .main-content {
+     width: calc(100% - var(--sidebar-width-collapsed));
+}
+
+.stat-card {
+    background-color: var(--bg-card);
+}
+
+.dropdown {
+    display: none;
+}
+.dropdown.show {
+    display: block;
+}
+
+.theme-aware-hover:hover {
+    background-color: var(--bg-hover);
+}
+
+/* --- Styling untuk Mobile (di bawah 767px) --- */
+@media (max-width: 767px) {
+    .main-content {
+        width: 100% !important;
+    }
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+        position: fixed;
+        height: 100%;
+        width: var(--sidebar-width-expanded) !important;
+    }
+    .sidebar-mobile-open .sidebar {
+        transform: translateX(0);
+    }
+     .mobile-overlay {
+        display: none;
+    }
+    .sidebar-mobile-open .mobile-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    
+    /* Pada tampilan mobile, abaikan kondisi 'sidebar-collapsed' */
+    /* Sidebar akan selalu lebar penuh saat terbuka */
+    .sidebar-collapsed .sidebar {
+        width: var(--sidebar-width-expanded) !important;
+    }
+    .sidebar-collapsed .sidebar .sidebar-menu-text {
+         opacity: 1; 
+         pointer-events: auto;
+    }
+}
