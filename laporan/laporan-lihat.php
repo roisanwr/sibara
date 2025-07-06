@@ -93,7 +93,7 @@ require_once '../templates/header.php';
                             <td class="px-6 py-4 text-sm max-w-sm truncate"><?php echo htmlspecialchars($data['keterangan'] ? $data['keterangan'] : '-'); ?></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm"><?php echo htmlspecialchars($data['nama_staff']); ?></td>
                             <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                                <a href="../transaksi/transaksi-detail.php?id=<?php echo $data['id_transaksi']; ?>" class="text-indigo-600 hover:text-indigo-900">Lihat Detail</a>
+                                <a href="laporan-detail.php?id=<?php echo $data['id_transaksi']; ?>" class="text-blue-600 hover:text-indigo-900">Lihat Detail</a>    
                             </td>
                         </tr>
                         <?php endwhile; ?>
