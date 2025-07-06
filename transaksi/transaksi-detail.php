@@ -29,8 +29,8 @@ $query_detail = "SELECT dt.*, b.nama_barang, b.satuan
                  WHERE dt.id_transaksi = '$id_transaksi'";
 $hasil_detail = mysqli_query($koneksi, $query_detail);
 
-$page_title = "Detail Transaksi #TR-" . $transaksi['id_transaksi'];
-$breadcrumbs = "Riwayat Transaksi / Detail";
+$page_title = "Penerimaan #TR-" . $transaksi['id_transaksi'];
+$breadcrumbs = "Penerimaan / Detail";
 $action_button = '';
 require_once '../templates/header.php';
 ?>

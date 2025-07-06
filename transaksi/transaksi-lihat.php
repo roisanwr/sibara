@@ -18,8 +18,8 @@ $query = "SELECT t.*, p.nama as nama_staff
 $hasil = mysqli_query($koneksi, $query);
 
 // Pengaturan untuk Header Dinamis
-$page_title = "Riwayat Transaksi Gudang";
-$breadcrumbs = "Manajemen Gudang / Riwayat Transaksi";
+$page_title = "Penerimaan Barang";
+$breadcrumbs = "Penerimaan Barang";
 // PERUBAHAN: Tombol aksi dikosongkan dari header
 $action_button = '';
 

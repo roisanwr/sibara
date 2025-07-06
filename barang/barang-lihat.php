@@ -16,8 +16,8 @@ $hasil = mysqli_query($koneksi, $query);
 // =========================================================
 // PENGATURAN UNTUK HEADER DINAMIS
 // =========================================================
-$page_title = "Master Barang";
-$breadcrumbs = "Manajemen Gudang / Master Barang";
+$page_title = "Data Barang";
+$breadcrumbs = "Manajemen Barang / Data Barang";
 // PERUBAHAN: Tombol aksi di header kita hapus dari sini
 $action_button = ''; 
 // =========================================================

@@ -52,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$page_title = "Catat Penerimaan Barang";
-$breadcrumbs = "Riwayat Transaksi / Penerimaan Barang";
+$page_title = "Penerimaan Barang";
+$breadcrumbs = "Penerimaan Barang / Tambah Penerimaan";
 $action_button = '';
 require_once '../templates/header.php';
 ?>

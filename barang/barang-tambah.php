@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // PENGATURAN UNTUK HEADER DINAMIS
 // =========================================================
 $page_title = "Tambah Barang Baru";
-$breadcrumbs = "Master Barang / Tambah";
+$breadcrumbs = "Data Barang / Tambah";
 $action_button = ''; // Tidak ada tombol aksi di header
 // =========================================================
 
